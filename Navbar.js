@@ -42,6 +42,7 @@ export class Navbar extends React.Component {
    */
   render () {
     let brand = this.renderBrand()
+    let contentEnd = this.props.navbarEnd || '';
 
     return (
       <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -51,6 +52,7 @@ export class Navbar extends React.Component {
           </div>
 
           <div className="navbar-end">
+            {contentEnd}
           </div>
         </div>
       </nav>
