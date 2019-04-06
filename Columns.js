@@ -3,7 +3,7 @@ import React from 'react'
 export class Column extends React.Component {
   classes () {
     let classes = ['column']
-    if (typeof this.props.classes !== "undefined") {
+    if (typeof this.props.classes !== 'undefined') {
       this.props.classes.forEach(c => {
         classes.push(c)
       })
@@ -32,7 +32,7 @@ export class Columns extends React.Component {
    */
   render () {
     return (
-      <div className="columns">
+      <div className='columns'>
         {this.props.children}
       </div>
     )

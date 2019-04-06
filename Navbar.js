@@ -6,7 +6,7 @@ export class Navbar extends React.Component {
    * @returns {boolean}
    */
   hasBrandOrLogo () {
-    return (typeof this.props.brand !== "undefined" || typeof  this.props.brandLogo !== "undefined")
+    return (typeof this.props.brand !== 'undefined' || typeof this.props.brandLogo !== 'undefined')
   }
 
   /**
@@ -19,17 +19,17 @@ export class Navbar extends React.Component {
     }
 
     let brandLogo = ''
-    if (typeof this.props.brandLogo !== "undefined") {
-      brandLogo = <img src={this.props.brandLogo} alt="Logo" width="112" height="28" />
+    if (typeof this.props.brandLogo !== 'undefined') {
+      brandLogo = <img src={this.props.brandLogo} alt='Logo' width='112' height='28' />
     }
     let brand = ''
-    if (typeof this.props.brand !== "undefined") {
+    if (typeof this.props.brand !== 'undefined') {
       brand = this.props.brand
     }
 
     return (
-      <div className="navbar-brand">
-        <a className="navbar-item" href="/">
+      <div className='navbar-brand'>
+        <a className='navbar-item' href='/'>
           {brandLogo}{brand}
         </a>
       </div>
@@ -42,16 +42,15 @@ export class Navbar extends React.Component {
    */
   render () {
     let brand = this.renderBrand()
-    let contentEnd = this.props.navbarEnd || '';
+    let contentEnd = this.props.navbarEnd || ''
 
     return (
-      <nav className="navbar" role="navigation" aria-label="main navigation">
+      <nav className='navbar' role='navigation' aria-label='main navigation'>
         {brand}
-        <div className="navbar-menu">
-          <div className="navbar-start">
-          </div>
+        <div className='navbar-menu'>
+          <div className='navbar-start' />
 
-          <div className="navbar-end">
+          <div className='navbar-end'>
             {contentEnd}
           </div>
         </div>
