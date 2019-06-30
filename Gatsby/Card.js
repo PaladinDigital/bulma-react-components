@@ -33,4 +33,16 @@ export class Card extends BaseCard {
 
     return fragments[fragment]
   }
+
+  /**
+   * Render the Card component.
+   * @returns {*}
+   */
+  render () {
+    if (typeof this.props.url !== 'undefined') {
+      return this.getContentFragment('linkCard')
+    }
+
+    return this.getContentFragment('card')
+  }
 }
