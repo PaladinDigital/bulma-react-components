@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 
 export class Card extends React.Component {
   getLink () {
@@ -33,7 +32,7 @@ export class Card extends React.Component {
     fragments.linkCard = ''
 
     if (typeof this.props.url !== 'undefined') {
-      fragments.linkCard = <Link href={link}>{fragments.card}</Link>
+      fragments.linkCard = <a href={link}>{fragments.card}</a>
     }
 
     return fragments[fragment]
