@@ -27,7 +27,7 @@ export class Breadcrumbs extends React.Component {
       return <li className="is-active" key={c.name}><a href="#" aria-current="page">{c.name}</a></li>
     }
 
-    return <li key={c.name}><Link href={c.url}><a>{c.name}</a></Link></li>
+    return <li key={c.name}><Link to={c.url}>{c.name}</Link></li>
   }
 
   render () {
