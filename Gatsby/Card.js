@@ -33,7 +33,13 @@ export class Card extends React.Component {
     fragments.linkCard = ''
 
     if (typeof this.props.url !== 'undefined') {
-      fragments.linkCard = <Link href={link}>{fragments.card}</Link>
+      let proto = this.props.url.substring(0, 4)
+      if (proto === 'http') {
+        fragments.linkCard = <a href={link}>{fragments.card}</a>
+      } else {
+        fragments.linkCard = <Link href={link}>{fragments.card}</Link>
+      }
+      
     }
 
     return fragments[fragment]
